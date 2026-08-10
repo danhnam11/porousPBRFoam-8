@@ -1,2 +1,0 @@
-NSRDS = thermophysicalFunctions/NSRDS
-LIB = $(FOAM_USER_LIBBIN)/libcatSpecie

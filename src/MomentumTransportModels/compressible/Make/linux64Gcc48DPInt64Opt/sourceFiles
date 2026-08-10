@@ -1,3 +1,0 @@
-SOURCE = \
-compressibleMomentumTransportModel.C \
-fluidThermoMomentumTransportModels/fluidThermoMomentumTransportModels.C 

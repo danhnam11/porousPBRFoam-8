@@ -1,1 +1,0 @@
-../radiationModels/sootModels/mixtureFraction/mixtureFraction.H

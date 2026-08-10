@@ -1,1 +1,0 @@
-../derivedFvPatchFields/specieTransferMassFraction/specieTransferMassFractionFvPatchScalarField.H

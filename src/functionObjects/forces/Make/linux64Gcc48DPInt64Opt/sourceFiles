@@ -1,3 +1,0 @@
-SOURCE = \
-forces/forces.C \
-forceCoeffs/forceCoeffs.C 

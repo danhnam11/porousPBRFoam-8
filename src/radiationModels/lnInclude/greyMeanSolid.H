@@ -1,1 +1,0 @@
-../absorptionEmissionModels/greyMeanSolid/greyMeanSolid.H

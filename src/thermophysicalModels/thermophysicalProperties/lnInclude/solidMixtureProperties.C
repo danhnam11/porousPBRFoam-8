@@ -1,1 +1,0 @@
-../solidProperties/solidMixtureProperties/solidMixtureProperties.C

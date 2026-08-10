@@ -1,3 +1,0 @@
-SOURCE = \
-scalarTransport/scalarTransport.C \
-phaseScalarTransport/phaseScalarTransport.C 

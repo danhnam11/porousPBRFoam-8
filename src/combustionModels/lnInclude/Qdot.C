@@ -1,1 +1,0 @@
-../functionObjects/Qdot/Qdot.C

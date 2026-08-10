@@ -1,1 +1,0 @@
-../magSqr/magSqr.C

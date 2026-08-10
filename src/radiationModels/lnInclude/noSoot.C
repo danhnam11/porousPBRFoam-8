@@ -1,1 +1,0 @@
-../sootModels/noSoot/noSoot.C

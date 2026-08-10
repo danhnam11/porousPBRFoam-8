@@ -1,1 +1,0 @@
-../surfaceChemistrySolver/noSurfaceChemistrySolver/noSurfaceChemistrySolver.C

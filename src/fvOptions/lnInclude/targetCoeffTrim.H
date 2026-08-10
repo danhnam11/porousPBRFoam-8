@@ -1,1 +1,0 @@
-../sources/derived/rotorDiskSource/trimModel/targetCoeff/targetCoeffTrim.H

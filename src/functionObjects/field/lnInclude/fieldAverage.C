@@ -1,1 +1,0 @@
-../fieldAverage/fieldAverage.C

@@ -1,1 +1,0 @@
-../derivedFvPatchFields/thermalBaffle/thermalBaffleFvPatchScalarField.H

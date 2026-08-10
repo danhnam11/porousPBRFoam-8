@@ -1,1 +1,0 @@
-../sootModels/sootModel/makeThermoSootModel.H

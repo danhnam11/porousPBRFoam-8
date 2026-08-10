@@ -1,1 +1,0 @@
-../radiationModels/viewFactor/viewFactorI.H

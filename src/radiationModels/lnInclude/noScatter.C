@@ -1,1 +1,0 @@
-../scatterModels/noScatter/noScatter.C

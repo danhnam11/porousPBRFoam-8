@@ -1,1 +1,0 @@
-../radiationModels/noRadiation/noRadiation.H

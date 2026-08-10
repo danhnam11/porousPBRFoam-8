@@ -1,1 +1,0 @@
-../psiReactionThermo/psiReactionThermo.C

@@ -1,1 +1,0 @@
-../submodels/kinematic/force/contactAngleForces/temperatureDependent/temperatureDependentContactAngleForce.C

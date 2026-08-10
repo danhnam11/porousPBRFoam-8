@@ -1,1 +1,0 @@
-../psiCatThermo/hePsiCatThermo.H

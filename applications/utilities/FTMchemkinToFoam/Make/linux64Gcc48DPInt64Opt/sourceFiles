@@ -1,8 +1,0 @@
-SOURCE = \
-chemkinReader/chemkinReader.C \
-chemkinReader/chemkinLexer.L \
-OrthogonalFitting/DPOLFT.C \
-OrthogonalFitting/DPCOEF.C \
-OrthogonalFitting/DP1VLU.C \
-PropertyReader.C \
-FTMchemkinToFoam.C 

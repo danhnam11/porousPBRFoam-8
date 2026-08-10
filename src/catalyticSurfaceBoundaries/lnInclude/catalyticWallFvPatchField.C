@@ -1,1 +1,0 @@
-../catalyticWall/catalyticWallFvPatchField.C

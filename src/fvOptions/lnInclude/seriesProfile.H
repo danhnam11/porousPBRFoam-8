@@ -1,1 +1,0 @@
-../sources/derived/rotorDiskSource/profileModel/series/seriesProfile.H

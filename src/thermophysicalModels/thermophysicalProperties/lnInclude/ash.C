@@ -1,1 +1,0 @@
-../solidProperties/ash/ash.C

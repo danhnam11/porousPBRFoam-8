@@ -1,1 +1,0 @@
-../infinitelyFastChemistry/infinitelyFastChemistry.C

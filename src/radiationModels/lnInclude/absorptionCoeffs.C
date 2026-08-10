@@ -1,1 +1,0 @@
-../radiationModels/fvDOM/absorptionCoeffs/absorptionCoeffs.C

@@ -1,1 +1,0 @@
-../noThermo/noThermo.C
