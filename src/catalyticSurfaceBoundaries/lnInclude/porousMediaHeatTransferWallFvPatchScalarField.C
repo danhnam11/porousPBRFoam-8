@@ -1,0 +1,1 @@
+../porousMediaHeatTransferWall/porousMediaHeatTransferWallFvPatchScalarField.C

@@ -1,0 +1,1 @@
+../porousTemperatureCoupledBaffleMixed/porousTemperatureCoupledBaffleMixedFvPatchScalarField.C

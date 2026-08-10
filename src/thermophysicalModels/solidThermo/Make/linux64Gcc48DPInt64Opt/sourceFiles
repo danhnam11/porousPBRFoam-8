@@ -1,0 +1,4 @@
+SOURCE = \
+solidThermo/solidThermo.C \
+solidPressureThermo/solidPressureThermo.C \
+heSolidThermo/heSolidThermos.C 

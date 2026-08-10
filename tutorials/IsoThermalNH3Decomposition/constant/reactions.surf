@@ -1,0 +1,210 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+
+Notes:
+
+    SURFACE MECHANISM FOR AMMONIA DECOMPOSITION OVER NICKEL
+                                                                 
+    N2/H2/NH3 - SURFACE MECHANISM OVER NI                        
+                                                                 
+References:
+    S. Appari, V.M. Janardhanan, S. Jayanti, L. Maier, 
+    S. Tischer, O. Deutschmann, Chem., Eng. Sci. 66 (2011)�      
+    5184-5191                                                    
+    Contact: mail@detchem.com (O. Deutschmann)                    
+    www.detchem.com/mechanisms                                    
+
+\*---------------------------------------------------------------------------*/
+
+reactions
+{
+    un-named-reaction-0 //
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "H2 + 2NI(s) = 2H(s)";
+        A               1.0e-2;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-1
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "2H(s) = 2NI(s) + H2";
+        A               3.315E+18;
+        beta            0;
+        Ta              9887.53396;
+    }
+    un-named-reaction-2 //
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "O2 + 2NI(s) = 2O(s)";
+        A               1.0e-2;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-3
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "2O(s) = 2NI(s) + O2";
+        A               3.928E+22;
+        beta            0;
+        Ta              56937.81113;
+    }
+    un-named-reaction-4 //
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "H2O + NI(s) = H2O(s)";
+        A               1.0e-1;
+        beta            0;
+        Ta              0;
+    }
+	//
+    un-named-reaction-5
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "H2O(s) = NI(s) + H2O";
+        A               4.747E+12;
+        beta            0;
+        Ta              7467.667968;
+    }
+    un-named-reaction-6
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "O(s) + H(s) = OH(s) + NI(s)";
+        A               5.000E+21;
+        beta            0;
+        Ta              11774.59646;
+    }
+    un-named-reaction-7
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "OH(s) + NI(s) = O(s) + H(s)";
+        A               1.761E+20;
+        beta            0;
+        Ta              4329.780107;
+    }
+    un-named-reaction-8
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "OH(s) + H(s) = H2O(s) + NI(s)";
+        A               3.000E+19;
+        beta            0;
+        Ta              5135.600294;
+    }
+    un-named-reaction-9
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "H2O(s) + NI(s) = OH(s) + H(s)";
+        A               2.068E+20;
+        beta            0;
+        Ta              10953.14095;
+    }
+    un-named-reaction-10
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "2OH(s) = O(s) + H2O(s)";
+        A               3.000E+20;
+        beta            0;
+        Ta              12027.16696;
+    }
+    un-named-reaction-11
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "O(s) + H2O(s) = 2OH(s)";
+        A               5.871E+22;
+        beta            0;
+        Ta              25289.52398;
+    }
+    un-named-reaction-12 //
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "NH3 + NI(s) = NH3(s)";
+        A               1.1e-2;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-13
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "NH3(s) = NI(s) + NH3";
+        A               8.210E+14;
+        beta            0;
+        Ta              9456.961384;
+    }
+    un-named-reaction-14 //
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "N2 + 2NI(s) = 2N(s)";
+        A               1.0e-6;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-15
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "2N(s) = 2NI(s) + N2";
+        A               4.442E+21;
+        beta            0;
+        Ta              25358.07883;
+    }
+    un-named-reaction-16
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "NH3(s) + NI(s) = NH2(s) + H(s)";
+        A               5.723E+21;
+        beta            0;
+        Ta              9500.259185;
+    }
+    un-named-reaction-17
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "NH2(s) + H(s) = NH3(s) + NI(s)";
+        A               1.320E+23;
+        beta            0;
+        Ta              5870.460195;
+    }
+    un-named-reaction-18
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "NH2(s) + NI(s) = NH(s) + H(s)";
+        A               2.718E+21;
+        beta            0;
+        Ta              9109.376259;
+    }
+    un-named-reaction-19
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "NH(s) + H(s) = NH2(s) + NI(s)";
+        A               3.702E+18;
+        beta            0;
+        Ta              9004.739907;
+    }
+    un-named-reaction-20
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "NH(s) + NI(s) = N(s) + H(s)";
+        A               6.213E+18;
+        beta            0;
+        Ta              2757.829385;
+    }
+    un-named-reaction-21
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "N(s) + H(s) = NH(s) + NI(s)";
+        A               2.070E+18;
+        beta            0;
+        Ta              18767.19133;
+    }
+
+}
+
+Tlow      0;
+Thigh     4.503599627e+15;
+
+
+// ************************************************************************* //

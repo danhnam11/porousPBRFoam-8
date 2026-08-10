@@ -1,0 +1,92 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+    "rho.*"
+    {
+        solver           PCG;
+        preconditioner   DIC;
+        tolerance        1e-6;
+        relTol           0.1;
+	minIter		 2;
+    }
+
+    p
+    {
+        solver           PCG;
+        preconditioner   DIC;
+        tolerance        1e-6;
+        relTol           0.1;
+	minIter		 2;
+    }
+
+    pFinal
+    {
+        $p;
+        tolerance        1e-6;
+        relTol           0.0;
+	minIter		 2;
+    }
+
+    "(U|h|e)"
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        tolerance       1e-6;
+        relTol          0.1;
+	minIter		2;
+    }
+
+    "(U|h|e)Final"
+    {
+        $U;
+        relTol          0;
+	minIter		2;
+    }
+
+    "Yi.*"
+    {
+        $hFinal;
+	minIter		2;
+    }
+}
+
+PIMPLE
+{
+    momentumPredictor no;
+    nOuterCorrectors  1;
+    nCorrectors     2;
+    nNonOrthogonalCorrectors 0;
+/*
+    maxDeltaT           0.001;
+    maxCo               5.0;
+    //maxCo               3.0;
+    alphaTemp           0.05;
+    alphaY              0.05;
+    Yref
+    {
+        O2                  0.1;
+        CH4                 0.1;
+    }
+    rDeltaTSmoothingCoeff   0.025;
+    rDeltaTDampingCoeff     1;
+*/
+}
+
+
+// ************************************************************************* //

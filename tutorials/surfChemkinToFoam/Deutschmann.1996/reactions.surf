@@ -1,0 +1,246 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      reactions.surf;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+reactions
+{
+    un-named-reaction-0
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "H2 + Pt(s) + Pt(s) = H(s) + H(s)";
+        A               0.046;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-1
+    {
+        type            irreversibleSurfaceCoverageModificationArrheniusSurface;
+        reaction        "H(s) + H(s) = Pt(s) + Pt(s) + H2";
+        A               3.7e+20;
+        beta            0;
+        Ta              8106.35673;
+        coeffs
+        11
+        (
+            (Pt(s) (0 0 0))
+            (C(s) (0 0 0))
+            (CH(s) (0 0 0))
+            (CH2(s) (0 0 0))
+            (CH3(s) (0 0 0))
+            (CO(s) (0 0 0))
+            (CO2(s) (0 0 0))
+            (H(s) (0 0 -721.6341303))
+            (H2O(s) (0 0 0))
+            (O(s) (0 0 0))
+            (OH(s) (0 0 0))
+        );
+    }
+    un-named-reaction-2
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "H + Pt(s) = H(s)";
+        A               1;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-3
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "O2 + Pt(s) + Pt(s) = O(s) + O(s)";
+        A               1.8e+17;
+        beta            -0.5;
+        Ta              0;
+    }
+    un-named-reaction-4
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "O2 + Pt(s) + Pt(s) = O(s) + O(s)";
+        A               0.023;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-5
+    {
+        type            irreversibleSurfaceCoverageModificationArrheniusSurface;
+        reaction        "O(s) + O(s) = Pt(s) + Pt(s) + O2";
+        A               3.7e+20;
+        beta            0;
+        Ta              25642.0661;
+        coeffs
+        11
+        (
+            (Pt(s) (0 0 0))
+            (C(s) (0 0 0))
+            (CH(s) (0 0 0))
+            (CH2(s) (0 0 0))
+            (CH3(s) (0 0 0))
+            (CO(s) (0 0 0))
+            (CO2(s) (0 0 0))
+            (H(s) (0 0 0))
+            (H2O(s) (0 0 0))
+            (O(s) (0 0 -7216.341303))
+            (OH(s) (0 0 0))
+        );
+    }
+    un-named-reaction-6
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "O + Pt(s) = O(s)";
+        A               1;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-7
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "H2O + Pt(s) = H2O(s)";
+        A               0.75;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-8
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "H2O(s) = Pt(s) + H2O";
+        A               1e+13;
+        beta            0;
+        Ta              4846.975908;
+    }
+    un-named-reaction-9
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "OH + Pt(s) = OH(s)";
+        A               1;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-10
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "OH(s) = Pt(s) + OH";
+        A               1e+13;
+        beta            0;
+        Ta              23188.51005;
+    }
+    un-named-reaction-11
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "H(s) + O(s) = OH(s) + Pt(s)";
+        A               3.7e+20;
+        beta            0;
+        Ta              1383.132083;
+    }
+    un-named-reaction-12
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "H(s) + OH(s) = H2O(s) + Pt(s)";
+        A               3.7e+20;
+        beta            0;
+        Ta              2092.738978;
+    }
+    un-named-reaction-13
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "OH(s) + OH(s) = H2O(s) + O(s)";
+        A               3.7e+20;
+        beta            0;
+        Ta              5797.127513;
+    }
+    un-named-reaction-14
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "CO + Pt(s) = CO(s)";
+        A               0.84;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-15
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "CO(s) = CO + Pt(s)";
+        A               1e+13;
+        beta            0;
+        Ta              15094.18056;
+    }
+    un-named-reaction-16
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "CO2(s) = CO2 + Pt(s)";
+        A               1e+13;
+        beta            0;
+        Ta              2465.583278;
+    }
+    un-named-reaction-17
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "CO(s) + O(s) = CO2(s) + Pt(s)";
+        A               3.7e+20;
+        beta            0;
+        Ta              12628.59728;
+    }
+    un-named-reaction-18
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "CH4 + Pt(s) + Pt(s) = CH3(s) + H(s)";
+        A               0.01;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-19
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "CH3(s) + Pt(s) = CH2(s) + H(s)";
+        A               3.7e+20;
+        beta            0;
+        Ta              2405.447101;
+    }
+    un-named-reaction-20
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "CH2(s) + Pt(s) = CH(s) + H(s)";
+        A               3.7e+20;
+        beta            0;
+        Ta              2405.447101;
+    }
+    un-named-reaction-21
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "CH(s) + Pt(s) = C(s) + H(s)";
+        A               3.7e+20;
+        beta            0;
+        Ta              2405.447101;
+    }
+    un-named-reaction-22
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "C(s) + O(s) = CO(s) + Pt(s)";
+        A               3.7e+20;
+        beta            0;
+        Ta              7553.103897;
+    }
+    un-named-reaction-23
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "CO(s) + Pt(s) = C(s) + O(s)";
+        A               1e+17;
+        beta            0;
+        Ta              22130.11333;
+    }
+}
+
+Tlow      0;
+Thigh     1.797693135e+307;

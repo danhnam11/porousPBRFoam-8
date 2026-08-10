@@ -1,0 +1,232 @@
+species
+9
+(
+NI(s)
+NH3(s)
+H(s)
+N(s)
+OH(s)
+O(s)
+NH2(s)
+NH(s)
+H2O(s)
+);
+
+
+NI(s)
+{
+    specie
+    {
+        molWeight       58.7;
+        siteDensity     2.6e-8;  // in CK: 2.6E-9 mol/cm2 , in kmol/m2 in OF
+    }
+    equationOfState
+    {
+        rho             8.9e3;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              17.48e6;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+
+NH3(s)
+{
+    specie
+    {
+        molWeight       17.0306;
+        siteDensity     2.6e-8;
+    }
+    equationOfState
+    {
+        rho             8.9e3;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+N(s)
+{
+    specie
+    {
+        molWeight       14.0067;
+        siteDensity     2.6e-8;
+    }
+    equationOfState
+    {
+        rho             8.9e3;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+H(s)
+{
+    specie
+    {
+        molWeight       1.00797;
+        siteDensity     2.6e-8;
+    }
+    equationOfState
+    {
+        rho             8.9e3;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+OH(s)
+{
+    specie
+    {
+        molWeight       17.0074;
+        siteDensity     2.6e-8;
+    }
+    equationOfState
+    {
+        rho             8.9e3;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+O(s)
+{
+    specie
+    {
+        molWeight       15.9994;
+        siteDensity     2.6e-8;
+    }
+    equationOfState
+    {
+        rho             8.9e3;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+NH2(s)
+{
+    specie
+    {
+        molWeight       16.0226;
+        siteDensity     2.6e-8;
+    }
+    equationOfState
+    {
+        rho             8.9e3;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+NH(s)
+{
+    specie
+    {
+        molWeight       15.0147;
+        siteDensity     2.6e-8;
+    }
+    equationOfState
+    {
+        rho             8.9e3;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+H2O(s)
+{
+    specie
+    {
+        molWeight       18.0153;
+        siteDensity     2.6e-8;
+    }
+    equationOfState
+    {
+        rho             8.9e3;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+

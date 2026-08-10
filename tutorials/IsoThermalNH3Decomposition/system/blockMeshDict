@@ -1,0 +1,127 @@
+/*---------------------------------------------------------------------------*\               
+| =========                 |                                                 |                
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |                
+|  \\    /   O peration     | Version:  1.0                                   |                
+|   \\  /    A nd           | Web:      http://www.openfoam.org               |                
+|    \\/     M anipulation  |                                                 |                
+\*---------------------------------------------------------------------------*/                
+                                        
+FoamFile                                
+{                                       
+    version         2.0;                
+    format          ascii;              
+    class           dictionary;         
+    object          blockMeshDict;      
+}          
+
+
+convertToMeters 0.001;  
+
+halfAngle 2.5;
+
+//- Radius
+
+r1 5; //pipe radius
+
+//- height
+h 20 ; //pipe height
+
+radHalfAngle	#calc "degToRad($halfAngle)";   //change degree to radian
+
+y1	#calc "$r1*cos($radHalfAngle)";
+pz1	#calc "$r1*sin($radHalfAngle)";
+nz1	#calc "-1*$pz1";
+
+vertices                                
+(                                      
+  (0 0 0) //0
+  (0 $y1 $pz1) //1
+  (0 $y1 $nz1) //2
+  ($h 0 0) //3
+  ($h $y1 $pz1) //4
+  ($h $y1 $nz1) //5 
+);
+
+edges
+(
+);
+
+blocks
+( 	
+	hex (0 2 1 0 3 5 4 3)   (20 1 80) simpleGrading (1 1 1) //
+
+);
+                                     
+                             
+boundary                            
+(        
+ 	inlet 
+        { 
+            type patch;    
+            faces 
+            ( 
+                (0 2 1 0)
+            ); 
+        }   
+                                                         
+                                   
+ 	outlet
+        { 
+            type patch;    
+            faces 
+            (                            
+        	(3 4 5 3)
+            ); 
+        }                               
+
+   	heatedWall
+        {
+            type wall;
+            faces
+            (
+		(1 2 5 4)
+            );
+        }
+                                     
+ 	axis              
+        { 
+            type empty;    
+            faces 
+            (                              
+	        (3 0 0 3)
+            ); 
+        }                         
+                                     
+ 	front              
+        {
+            type wedge;    
+            faces 
+            (                                     
+		(2 0 3 5) 
+            ); 
+        }                           
+                                     
+ 	back              
+        { 
+            type wedge;    
+            faces 
+            (                                    
+		(0 1 4 3)                  
+            ); 
+        }                                 
+                                    
+);                                   
+                                     
+mergePatchPairs                      
+(                                    
+);                                   
+                                                                  
+                      
+
+                             
+          
+	
+
+     
+                           
+                                       

@@ -1,0 +1,51 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      surfaceChemistryProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// Select the porous-media surface-chemistry treatment
+onlySurfaceCatalyst false; // default: false
+
+// Compatibility entries; leave empty for the present PMM setup
+catalystRegions
+{
+    catalyticSurfaces   ( );
+    catalyticZones      ( );
+}
+
+// Catalytic surface area per unit reactor volume [1/m]
+SurfaceToVolumeRatio            2.8E5;
+
+// Surface-chemistry method and ODE solver
+surfaceChemistryType
+{
+    method          porousMediaSCHEM;   // porous-media model
+    solver          odeSCHEM;
+}
+
+chemistry           on;
+
+initialChemicalTimeStep 1e-07;
+
+odeSCHEMCoeffs
+{
+    solver          seulex;
+    absTol          1e-8;
+    relTol          0.01;
+}
+
+#include "reactions.surf"
+
+// ************************************************************************* //

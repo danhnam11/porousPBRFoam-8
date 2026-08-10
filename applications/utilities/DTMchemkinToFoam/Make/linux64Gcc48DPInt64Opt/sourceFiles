@@ -1,0 +1,4 @@
+SOURCE = \
+chemkinReader/chemkinReader.C \
+chemkinReader/chemkinLexer.L \
+DTMchemkinToFoam.C 

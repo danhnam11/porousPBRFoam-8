@@ -1,0 +1,149 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      thermo.catalyst.solid.const;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+species
+5
+(
+Rh(s)
+H2O(s)
+H(s)
+OH(s)
+O(s)
+);
+
+Rh(s)
+{
+    specie
+    {
+        molWeight       102.905;
+        siteDensity     2.7e-08;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+H(s)
+{
+    specie
+    {
+        molWeight       1.00797;
+        siteDensity     2.7e-08;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+O(s)
+{
+    specie
+    {
+        molWeight       15.9994;
+        siteDensity     2.7e-08;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+OH(s)
+{
+    specie
+    {
+        molWeight       17.00737;
+        siteDensity     2.7e-08;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+H2O(s)
+{
+    specie
+    {
+        molWeight       18.01534;
+        siteDensity     2.7e-08;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+// ************************************************************************* //

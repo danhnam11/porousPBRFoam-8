@@ -1,0 +1,124 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      thermo.catalyst.solid.const;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+species
+4
+(
+Ru(s)
+NH3(s)
+N(s)
+H(s)
+);
+
+Ru(s)
+{
+    specie
+    {
+        molWeight       101.07;
+        siteDensity     7.3e-06;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+NH3(s)
+{
+    specie
+    {
+        molWeight       17.03061;
+        siteDensity     7.3e-06;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+H(s)
+{
+    specie
+    {
+        molWeight       1.00797;
+        siteDensity     7.3e-06;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+N(s)
+{
+    specie
+    {
+        molWeight       14.0067;
+        siteDensity     7.3e-06;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+// ************************************************************************* //

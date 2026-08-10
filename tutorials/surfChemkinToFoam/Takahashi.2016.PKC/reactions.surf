@@ -1,0 +1,72 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      reactions.surf;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+reactions
+{
+    un-named-reaction-0
+    {
+        type            irreversibleSurfaceTakahashiSurface;
+        reaction        "NH3 + Ru(s) = NH3(s)";
+        A               3443700;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-1
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "NH3(s) + 3Ru(s) = N(s) + 3H(s)";
+        A               1.4288e+34;
+        beta            0;
+        Ta              12724.81516;
+    }
+    un-named-reaction-2
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "2N(s) = N2 + 2Ru(s)";
+        A               3.5406e+15;
+        beta            0;
+        Ta              14853.63585;
+    }
+    un-named-reaction-3
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "2H(s) = H2 + 2Ru(s)";
+        A               4.0608e+12;
+        beta            0;
+        Ta              8154.465672;
+    }
+    un-named-reaction-4
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "NH3(s) = Ru(s) + NH3";
+        A               9.867e+18;
+        beta            0;
+        Ta              7697.430723;
+    }
+    un-named-reaction-5
+    {
+        type            irreversibleSurfaceTakahashiSurface;
+        reaction        "H2 + 2Ru(s) = 2H(s)";
+        A               268930000;
+        beta            0;
+        Ta              0;
+    }
+}
+
+Tlow      0;
+Thigh     1.797693135e+307;

@@ -1,0 +1,120 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      reactions.surf;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+reactions
+{
+    un-named-reaction-0
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "Ni(s) + Ni(s) + H2 = H(s) +H(s)";
+        A               0.01;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-1
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "Ni(s) + NH3 = NH3(s)";
+        A               0.011;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-2
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "Ni(s) + Ni(s) + N2 = N(s) + N(s)";
+        A               1e-06;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-3
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "H(s) +H(s) = Ni(s) + Ni(s) +H2";
+        A               3.315e+18;
+        beta            0;
+        Ta              9887.590308;
+    }
+    un-named-reaction-4
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "NH3(s) = Ni(s) + NH3";
+        A               8.21e+14;
+        beta            0;
+        Ta              9457.015277;
+    }
+    un-named-reaction-5
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "N(s) + N(s) = Ni(s) + Ni(s) + N2";
+        A               4.442e+21;
+        beta            0;
+        Ta              25358.22334;
+    }
+    un-named-reaction-6
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "NH3(s) + Ni(s) = NH2(s) + H(s)";
+        A               5.723e+21;
+        beta            0;
+        Ta              9500.313325;
+    }
+    un-named-reaction-7
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "NH2(s) + H(s) = NH3(s) + Ni(s)";
+        A               1.32e+23;
+        beta            0;
+        Ta              5870.49365;
+    }
+    un-named-reaction-8
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "NH2(s) + Ni(s) = NH(s) + H(s)";
+        A               2.718e+21;
+        beta            0;
+        Ta              9109.428171;
+    }
+    un-named-reaction-9
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "NH(s) + H(s) = NH2(s) + Ni(s)";
+        A               3.702e+18;
+        beta            0;
+        Ta              9004.791222;
+    }
+    un-named-reaction-10
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "NH(s) + Ni(s) = N(s) + H(s)";
+        A               6.213e+18;
+        beta            0;
+        Ta              2757.845101;
+    }
+    un-named-reaction-11
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "N(s) + H(s) = NH(s) + Ni(s)";
+        A               2.07e+18;
+        beta            0;
+        Ta              18767.29828;
+    }
+}
+
+Tlow      0;
+Thigh     1.797693135e+307;

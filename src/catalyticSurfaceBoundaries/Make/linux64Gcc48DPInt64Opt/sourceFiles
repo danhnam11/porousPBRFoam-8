@@ -1,0 +1,7 @@
+SOURCE = \
+catalyticWall/catalyticWallFvPatchFields.C \
+stefanFlowVelocity/stefanFlowVelocityFvPatchVectorField.C \
+speciesFluxFromCatalyticSurfaces/speciesFluxFromCatalyticSurfacesFvPatchScalarField.C \
+heatFluxFromCatalyticSurfaces/heatFluxFromCatalyticSurfacesFvPatchScalarField.C \
+porousMediaHeatTransferWall/porousMediaHeatTransferWallFvPatchScalarField.C \
+porousTemperatureCoupledBaffleMixed/porousTemperatureCoupledBaffleMixedFvPatchScalarField.C 

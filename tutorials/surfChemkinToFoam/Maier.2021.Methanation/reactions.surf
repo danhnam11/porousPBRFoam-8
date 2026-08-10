@@ -1,0 +1,558 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      reactions.surf;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+reactions
+{
+    un-named-reaction-0
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "2NI(s) +H2 = 2H(s)";
+        A               0.01458;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-1
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "2H(s) = 2NI(s) +H2";
+        A               4.538e+20;
+        beta            -0.138;
+        Ta              11559.1355;
+    }
+    un-named-reaction-2
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "CH4 +NI(s) = CH4(s)";
+        A               0.01064;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-3
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "CH4(s) = CH4 +NI(s)";
+        A               2.793e+15;
+        beta            0.085;
+        Ta              4447.310872;
+    }
+    un-named-reaction-4
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "H2O +NI(s) = H2O(s)";
+        A               0.1163;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-5
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "H2O(s) = NI(s) +H2O";
+        A               2.035e+12;
+        beta            -0.031;
+        Ta              7341.184007;
+    }
+    un-named-reaction-6
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "CO2 +NI(s) = CO2(s)";
+        A               6.288e-05;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-7
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "CO2(s) = CO2 +NI(s)";
+        A               49930000;
+        beta            0.018;
+        Ta              3106.755203;
+    }
+    un-named-reaction-8
+    {
+        type            irreversibleSurfaceStickArrheniusSurface;
+        reaction        "CO +NI(s) = CO(s)";
+        A               0.3737;
+        beta            0;
+        Ta              0;
+    }
+    un-named-reaction-9
+    {
+        type            irreversibleSurfaceCoverageModificationArrheniusSurface;
+        reaction        "CO(s) = CO +NI(s)";
+        A               1.144e+12;
+        beta            -0.103;
+        Ta              13469.54159;
+        coeffs
+        14
+        (
+            (NI(s) (0 0 0))
+            (H2O(s) (0 0 0))
+            (H(s) (0 0 0))
+            (OH(s) (0 0 0))
+            (CO(s) (0 0 -6013.617752))
+            (C(s) (0 0 0))
+            (CH3(s) (0 0 0))
+            (CH2(s) (0 0 0))
+            (CH(s) (0 0 0))
+            (CH4(s) (0 0 0))
+            (O(s) (0 0 0))
+            (CO2(s) (0 0 0))
+            (HCO(s) (0 0 0))
+            (COOH(s) (0 0 0))
+        );
+    }
+    un-named-reaction-10
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "NI(s) +CO2(s) = O(s) +CO(s)";
+        A               1.601e+22;
+        beta            -1.001;
+        Ta              10743.20784;
+    }
+    un-named-reaction-11
+    {
+        type            irreversibleSurfaceCoverageModificationArrheniusSurface;
+        reaction        "O(s) +CO(s) = NI(s) +CO2(s)";
+        A               5.806e+18;
+        beta            0;
+        Ta              14865.18199;
+        coeffs
+        14
+        (
+            (NI(s) (0 0 0))
+            (H2O(s) (0 0 0))
+            (H(s) (0 0 0))
+            (OH(s) (0 0 0))
+            (CO(s) (0 0 -6013.617752))
+            (C(s) (0 0 0))
+            (CH3(s) (0 0 0))
+            (CH2(s) (0 0 0))
+            (CH(s) (0 0 0))
+            (CH4(s) (0 0 0))
+            (O(s) (0 0 0))
+            (CO2(s) (0 0 0))
+            (HCO(s) (0 0 0))
+            (COOH(s) (0 0 0))
+        );
+    }
+    un-named-reaction-12
+    {
+        type            irreversibleSurfaceCoverageModificationArrheniusSurface;
+        reaction        "NI(s) +CO(s) = O(s) +C(s)";
+        A               2.355e+13;
+        beta            0;
+        Ta              13971.19758;
+        coeffs
+        14
+        (
+            (NI(s) (0 0 0))
+            (H2O(s) (0 0 0))
+            (H(s) (0 0 0))
+            (OH(s) (0 0 0))
+            (CO(s) (0 0 -6013.617752))
+            (C(s) (0 0 0))
+            (CH3(s) (0 0 0))
+            (CH2(s) (0 0 0))
+            (CH(s) (0 0 0))
+            (CH4(s) (0 0 0))
+            (O(s) (0 0 0))
+            (CO2(s) (0 0 0))
+            (HCO(s) (0 0 0))
+            (COOH(s) (0 0 0))
+        );
+    }
+    un-named-reaction-13
+    {
+        type            irreversibleSurfaceCoverageModificationArrheniusSurface;
+        reaction        "O(s) +C(s) = NI(s) +CO(s)";
+        A               2.541e+17;
+        beta            0;
+        Ta              17809.56952;
+        coeffs
+        14
+        (
+            (NI(s) (0 0 0))
+            (H2O(s) (0 0 0))
+            (H(s) (0 0 0))
+            (OH(s) (0 0 0))
+            (CO(s) (0 0 0))
+            (C(s) (0 0 -12628.59728))
+            (CH3(s) (0 0 0))
+            (CH2(s) (0 0 0))
+            (CH(s) (0 0 0))
+            (CH4(s) (0 0 0))
+            (O(s) (0 0 0))
+            (CO2(s) (0 0 0))
+            (HCO(s) (0 0 0))
+            (COOH(s) (0 0 0))
+        );
+    }
+    un-named-reaction-14
+    {
+        type            irreversibleSurfaceCoverageModificationArrheniusSurface;
+        reaction        "CO(s) +H(s) = OH(s) +C(s)";
+        A               3.045e+17;
+        beta            -0.223;
+        Ta              12661.31136;
+        coeffs
+        14
+        (
+            (NI(s) (0 0 0))
+            (H2O(s) (0 0 0))
+            (H(s) (0 0 0))
+            (OH(s) (0 0 0))
+            (CO(s) (0 0 -6013.617752))
+            (C(s) (0 0 0))
+            (CH3(s) (0 0 0))
+            (CH2(s) (0 0 0))
+            (CH(s) (0 0 0))
+            (CH4(s) (0 0 0))
+            (O(s) (0 0 0))
+            (CO2(s) (0 0 0))
+            (HCO(s) (0 0 0))
+            (COOH(s) (0 0 0))
+        );
+    }
+    un-named-reaction-15
+    {
+        type            irreversibleSurfaceCoverageModificationArrheniusSurface;
+        reaction        "OH(s) +C(s) = CO(s) +H(s)";
+        A               2.184e+17;
+        beta            0.128;
+        Ta              7550.457905;
+        coeffs
+        14
+        (
+            (NI(s) (0 0 0))
+            (H2O(s) (0 0 0))
+            (H(s) (0 0 0))
+            (OH(s) (0 0 0))
+            (CO(s) (0 0 0))
+            (C(s) (0 0 -12628.59728))
+            (CH3(s) (0 0 0))
+            (CH2(s) (0 0 0))
+            (CH(s) (0 0 0))
+            (CH4(s) (0 0 0))
+            (O(s) (0 0 0))
+            (CO2(s) (0 0 0))
+            (HCO(s) (0 0 0))
+            (COOH(s) (0 0 0))
+        );
+    }
+    un-named-reaction-16
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "CO(s) +H(s) = HCO(s) +NI(s)";
+        A               6.823e+20;
+        beta            -0.979;
+        Ta              15885.45238;
+    }
+    un-named-reaction-17
+    {
+        type            irreversibleSurfaceCoverageModificationArrheniusSurface;
+        reaction        "HCO(s) +NI(s) = CO(s) +H(s)";
+        A               2.179e+19;
+        beta            -0.021;
+        Ta              18.16112561;
+        coeffs
+        14
+        (
+            (NI(s) (0 0 0))
+            (H2O(s) (0 0 0))
+            (H(s) (0 0 0))
+            (OH(s) (0 0 0))
+            (CO(s) (0 0 6013.617752))
+            (C(s) (0 0 0))
+            (CH3(s) (0 0 0))
+            (CH2(s) (0 0 0))
+            (CH(s) (0 0 0))
+            (CH4(s) (0 0 0))
+            (O(s) (0 0 0))
+            (CO2(s) (0 0 0))
+            (HCO(s) (0 0 0))
+            (COOH(s) (0 0 0))
+        );
+    }
+    un-named-reaction-18
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "HCO(s) +NI(s) = O(s) +CH(s)";
+        A               5.104e+14;
+        beta            0.023;
+        Ta              9828.536582;
+    }
+    un-named-reaction-19
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "O(s) +CH(s) = HCO(s) +NI(s)";
+        A               3.421e+18;
+        beta            -0.023;
+        Ta              13249.3229;
+    }
+    un-named-reaction-20
+    {
+        type            irreversibleSurfaceCoverageModificationArrheniusSurface;
+        reaction        "H(s) +C(s) = NI(s) +CH(s)";
+        A               1.327e+23;
+        beta            -0.456;
+        Ta              18961.53813;
+        coeffs
+        14
+        (
+            (NI(s) (0 0 0))
+            (H2O(s) (0 0 0))
+            (H(s) (0 0 0))
+            (OH(s) (0 0 0))
+            (CO(s) (0 0 0))
+            (C(s) (0 0 -12628.59728))
+            (CH3(s) (0 0 0))
+            (CH2(s) (0 0 0))
+            (CH(s) (0 0 0))
+            (CH4(s) (0 0 0))
+            (O(s) (0 0 0))
+            (CO2(s) (0 0 0))
+            (HCO(s) (0 0 0))
+            (COOH(s) (0 0 0))
+        );
+    }
+    un-named-reaction-21
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "NI(s) +CH(s) = H(s) +C(s)";
+        A               2.633e+21;
+        beta            0.456;
+        Ta              2676.661261;
+    }
+    un-named-reaction-22
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "CH(s) +H(s) = CH2(s) +NI(s)";
+        A               3.21e+24;
+        beta            -0.084;
+        Ta              9748.194649;
+    }
+    un-named-reaction-23
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "CH2(s) +NI(s) = CH(s) +H(s)";
+        A               6.156e+23;
+        beta            0.084;
+        Ta              11453.4161;
+    }
+    un-named-reaction-24
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "CH2(s) +H(s) = CH3(s) +NI(s)";
+        A               7.778e+21;
+        beta            -0.048;
+        Ta              7150.432052;
+    }
+    un-named-reaction-25
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "CH3(s) +NI(s) = CH2(s) +H(s)";
+        A               6.157e+23;
+        beta            0.048;
+        Ta              11531.47286;
+    }
+    un-named-reaction-26
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "CH3(s) +H(s) = NI(s) +CH4(s)";
+        A               3.628e+20;
+        beta            -0.048;
+        Ta              7902.134271;
+    }
+    un-named-reaction-27
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "NI(s) +CH4(s) = CH3(s) +H(s)";
+        A               6.156e+20;
+        beta            0.048;
+        Ta              6443.952238;
+    }
+    un-named-reaction-28
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "O(s) +H(s) = OH(s) +NI(s)";
+        A               1.158e+23;
+        beta            -0.176;
+        Ta              12532.25912;
+    }
+    un-named-reaction-29
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "OH(s) +NI(s) = O(s) +H(s)";
+        A               7.696e+18;
+        beta            0.176;
+        Ta              3583.033729;
+    }
+    un-named-reaction-30
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "OH(s) +H(s) = NI(s) +H2O(s)";
+        A               2.342e+19;
+        beta            0.075;
+        Ta              5303.409496;
+    }
+    un-named-reaction-31
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "NI(s) +H2O(s) = OH(s) +H(s)";
+        A               2.907e+20;
+        beta            -0.075;
+        Ta              10868.41136;
+    }
+    un-named-reaction-32
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "OH(s) +OH(s) = O(s) +H2O(s)";
+        A               1.011e+19;
+        beta            0.251;
+        Ta              11436.81851;
+    }
+    un-named-reaction-33
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "O(s) +H2O(s) = OH(s) +OH(s)";
+        A               1.889e+24;
+        beta            -0.251;
+        Ta              25951.04578;
+    }
+    un-named-reaction-34
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "H(s) +CO2(s) = COOH(s) +NI(s)";
+        A               1.287e+24;
+        beta            -0.46;
+        Ta              14095.92001;
+    }
+    un-named-reaction-35
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "COOH(s) +NI(s) = H(s) +CO2(s)";
+        A               1.288e+19;
+        beta            0.46;
+        Ta              4065.2056;
+    }
+    un-named-reaction-36
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "COOH(s) +NI(s) = OH(s) +CO(s)";
+        A               6.032e+22;
+        beta            -0.216;
+        Ta              6538.967399;
+    }
+    un-named-reaction-37
+    {
+        type            irreversibleSurfaceCoverageModificationArrheniusSurface;
+        reaction        "OH(s) +CO(s) = COOH(s) +NI(s)";
+        A               1.453e+20;
+        beta            0.216;
+        Ta              11742.43057;
+        coeffs
+        14
+        (
+            (NI(s) (0 0 0))
+            (H2O(s) (0 0 0))
+            (H(s) (0 0 0))
+            (OH(s) (0 0 0))
+            (CO(s) (0 0 -6013.617752))
+            (C(s) (0 0 0))
+            (CH3(s) (0 0 0))
+            (CH2(s) (0 0 0))
+            (CH(s) (0 0 0))
+            (CH4(s) (0 0 0))
+            (O(s) (0 0 0))
+            (CO2(s) (0 0 0))
+            (HCO(s) (0 0 0))
+            (COOH(s) (0 0 0))
+        );
+    }
+    un-named-reaction-38
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "COOH(s) +H(s) = HCO(s) +OH(s)";
+        A               4.22e+22;
+        beta            -1.145;
+        Ta              12596.36429;
+    }
+    un-named-reaction-39
+    {
+        type            irreversibleSurfaceArrheniusSurface;
+        reaction        "HCO(s) +OH(s) = COOH(s) +H(s)";
+        A               3.246e+18;
+        beta            0.245;
+        Ta              1932.536201;
+    }
+    un-named-reaction-40
+    {
+        type            irreversibleSurfaceCoverageModificationArrheniusSurface;
+        reaction        "CO(s) +CO(s) = C(s) +CO2(s)";
+        A               6.312e+12;
+        beta            0.5;
+        Ta              29067.30249;
+        coeffs
+        14
+        (
+            (NI(s) (0 0 0))
+            (H2O(s) (0 0 0))
+            (H(s) (0 0 0))
+            (OH(s) (0 0 0))
+            (CO(s) (0 0 -12027.2355))
+            (C(s) (0 0 0))
+            (CH3(s) (0 0 0))
+            (CH2(s) (0 0 0))
+            (CH(s) (0 0 0))
+            (CH4(s) (0 0 0))
+            (O(s) (0 0 0))
+            (CO2(s) (0 0 0))
+            (HCO(s) (0 0 0))
+            (COOH(s) (0 0 0))
+        );
+    }
+    un-named-reaction-41
+    {
+        type            irreversibleSurfaceCoverageModificationArrheniusSurface;
+        reaction        "C(s) +CO2(s) = CO(s) +CO(s)";
+        A               1.878e+20;
+        beta            -0.5;
+        Ta              28783.70028;
+        coeffs
+        14
+        (
+            (NI(s) (0 0 0))
+            (H2O(s) (0 0 0))
+            (H(s) (0 0 0))
+            (OH(s) (0 0 0))
+            (CO(s) (0 0 0))
+            (C(s) (0 0 -12628.59728))
+            (CH3(s) (0 0 0))
+            (CH2(s) (0 0 0))
+            (CH(s) (0 0 0))
+            (CH4(s) (0 0 0))
+            (O(s) (0 0 0))
+            (CO2(s) (0 0 0))
+            (HCO(s) (0 0 0))
+            (COOH(s) (0 0 0))
+        );
+    }
+}
+
+Tlow      0;
+Thigh     1.797693135e+307;

@@ -1,0 +1,369 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      thermo.catalyst.solid.const;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+species
+9
+(
+Rh(s)
+H2O(s)
+H(s)
+OH(s)
+CO(s)
+O(s)
+C(s)
+CO2(s)
+COOH(s)
+);
+
+Rh(s)
+{
+    specie
+    {
+        molWeight       102.905;
+        siteDensity     2.72e-08;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+NH(s)
+{
+    specie
+    {
+        molWeight       15.01467;
+        siteDensity     2.72e-08;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+H2O(s)
+{
+    specie
+    {
+        molWeight       18.01534;
+        siteDensity     2.72e-08;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+H2(s)
+{
+    specie
+    {
+        molWeight       2.01594;
+        siteDensity     2.72e-08;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+H(s)
+{
+    specie
+    {
+        molWeight       1.00797;
+        siteDensity     2.72e-08;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+C(s)
+{
+    specie
+    {
+        molWeight       12.01115;
+        siteDensity     2.72e-08;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+O(s)
+{
+    specie
+    {
+        molWeight       15.9994;
+        siteDensity     2.72e-08;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+N(s)
+{
+    specie
+    {
+        molWeight       14.0067;
+        siteDensity     2.72e-08;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+OH(s)
+{
+    specie
+    {
+        molWeight       17.00737;
+        siteDensity     2.72e-08;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+NH(s)
+{
+    specie
+    {
+        molWeight       15.01467;
+        siteDensity     2.72e-08;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+NH2(s)
+{
+    specie
+    {
+        molWeight       16.02264;
+        siteDensity     2.72e-08;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+CO(s)
+{
+    specie
+    {
+        molWeight       28.01055;
+        siteDensity     2.72e-08;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+CO2(s)
+{
+    specie
+    {
+        molWeight       44.00995;
+        siteDensity     2.72e-08;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+COOH(s)
+{
+    specie
+    {
+        molWeight       45.01792;
+        siteDensity     2.72e-08;
+    }
+    equationOfState
+    {
+        rho             8900;
+    }
+    thermodynamics
+    {
+        Cp              440;
+        Hf              0;
+        Cv              440;
+    }
+    transport
+    {
+        mu              0;
+        Pr              1;
+    }
+}
+
+// ************************************************************************* //
