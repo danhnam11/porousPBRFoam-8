@@ -1,0 +1,12 @@
+
+# Local validation cases
+/validation/
+
+# OpenFOAM build output
+**/Make/linux*/
+platforms/
+
+# Editor temporary files
+*.swp
+*.swo
+*~

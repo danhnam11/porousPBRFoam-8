@@ -109,7 +109,6 @@ void Foam::combustionModels::laminar<ReactionThermo>::correct()
         else
         {
             this->chemistryPtr_->solve(this->mesh().time().deltaTValue());
-	    Info << "deltaT is : " << this->mesh().time().deltaTValue() << endl;
         }
     }
     else

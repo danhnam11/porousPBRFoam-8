@@ -1,0 +1,36 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      porousMediaProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// Solid Thermophysical properties
+SolidThermalConductivity     			1.175;   // [W/m-K]
+SolidDensity                 			2719;   // [kg/m3]
+SolidHeatCapacity            			871;    // [J/kg-K]
+
+// Porous Media geometric properties
+Porosity                     			0.4165; // [-]
+ParticleDiameter             			5e-3;   // [m]
+
+// Porous Media closure model
+pressureDropClosureModel			None;
+ThermalConductivityClosureModel 		Const;
+DiffusivityClosureModel				BruggemanWilhelm;
+WallHeatTransferClosureModel                    Const;
+
+EffectiveThermalConductivity  			0.7;
+heatTransferCoefficient				100;
+
+// ************************************************************************* //
