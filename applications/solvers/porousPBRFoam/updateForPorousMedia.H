@@ -28,7 +28,10 @@ else if
 
 porousMomentumCoeff.correctBoundaryConditions();
 
-// Update the particle Reynolds and fluid Prandtl numbers.
+if (!isothermal)
+{
+// Update the particle Reynolds and fluid Prandtl numbers used by thermal
+// closure models.
 Re = (DP*USUP)*rho/mu;
 Pr = Cp*mu/kappa;
 
@@ -125,6 +128,7 @@ else if (kEffClosureModel_ == "Wakao")
 
     kappaEff  = kappaEffStag + kappaEffMix;
     pAlphaEff = kappaEff/Cp;
+}
 }
 
 // Update the effective species diffusivities using the selected closure.

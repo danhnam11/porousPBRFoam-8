@@ -10,6 +10,7 @@ wmake $targetType applications/solvers/reactingFoam
 wmake $targetType applications/solvers/DTLreactingFoam
 wmake $targetType applications/solvers/catalystFoam
 wmake $targetType applications/solvers/porousPBRFoam
+wmake $targetType applications/solvers/porousRhoPBRFoam
 
 wmake $targetType applications/utilities/chemkinToFoam
 wmake $targetType applications/utilities/DTMchemkinToFoam

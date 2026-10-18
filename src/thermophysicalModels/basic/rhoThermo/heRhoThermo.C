@@ -287,7 +287,14 @@ Foam::heRhoThermo<BasicPsiThermo, MixtureType>::heRhoThermo
     }
     forAll(Dij_, i)
     {
-        Dij_[i] = PtrList<volScalarField>(MixtureType::numberOfSpecies());
+        Dij_.set
+        (
+            i,
+            new PtrList<volScalarField>
+            (
+                MixtureType::numberOfSpecies()
+            )
+        );
 
         forAll(Dij_[i], j)
         {

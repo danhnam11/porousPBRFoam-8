@@ -1,1 +1,0 @@
-Foam::clockTime myTime;

@@ -59,14 +59,15 @@ scalar por     (readScalar(porousMediaDict.lookup("Porosity")));
 scalar dp      (readScalar(porousMediaDict.lookup("ParticleDiameter")));
 // Solid specific heat capacity [J kg^-1 K^-1]
 scalar Cps     (readScalar(porousMediaDict.lookup("SolidHeatCapacity")));
-// Solid thermal conductivity [W m^-1 K^-1]
-scalar kappas  (readScalar(porousMediaDict.lookup("SolidThermalConductivity")));
-// Solid enthalpy diffusivity, kappa_s/Cp_s [kg m^-1 s^-1]
-scalar alphas = kappas/Cps;
+// Solid thermal conductivity and enthalpy diffusivity. They are loaded below
+// only for closures that explicitly use the solid conductivity.
+scalar kappas = 0.0;
+scalar alphas = 0.0;
 // Solid density [kg m^-3]
 scalar rhos    (readScalar(porousMediaDict.lookup("SolidDensity")));
-// Reference superficial velocity used by closure correlations [m s^-1]
-scalar usup    (readScalar(porousMediaDict.lookup("SuperficialVelocity")));
+// Reference superficial velocity used by Reynolds-based closure correlations.
+// It is loaded below only when the selected closure requires it.
+scalar usup = 0.0;
 // Catalytic surface-to-volume ratio remains zero in non-reacting PM mode.
 scalar fs2v = 0.0;
 
@@ -121,34 +122,88 @@ if (DiEffClosureModel_ != "BruggemanWilhelm")
         << "Valid option is: BruggemanWilhelm"
         << exit(FatalIOError);
 }
-// Read and validate the effective-thermal-conductivity closure.
-if (!porousMediaDict.found("ThermalConductivityClosureModel"))
+// Thermal closure data are meaningful only when the energy equation is
+// active. "None" is an internal sentinel and is not a user-selectable model.
+word kEffClosureModel_("None");
+
+if (!isothermal)
 {
-    FatalIOErrorInFunction(porousMediaDict)
-        << "Missing required entry 'ThermalConductivityClosureModel'." << nl
-        << "Valid options are: Const, Standard, Bunnell, Yagi, Wakao"
-        << exit(FatalIOError);
+    if (!porousMediaDict.found("ThermalConductivityClosureModel"))
+    {
+        FatalIOErrorInFunction(porousMediaDict)
+            << "Missing required entry 'ThermalConductivityClosureModel'." << nl
+            << "Valid options are: Const, Standard, Bunnell, Yagi, Wakao"
+            << exit(FatalIOError);
+    }
+
+    kEffClosureModel_ =
+        word(porousMediaDict.lookup("ThermalConductivityClosureModel"));
+
+    if
+    (
+        kEffClosureModel_ != "Const"
+     && kEffClosureModel_ != "Standard"
+     && kEffClosureModel_ != "Bunnell"
+     && kEffClosureModel_ != "Yagi"
+     && kEffClosureModel_ != "Wakao"
+    )
+    {
+        FatalIOErrorInFunction(porousMediaDict)
+            << "Unknown ThermalConductivityClosureModel: "
+            << kEffClosureModel_ << nl
+            << "Valid options are: Const, Standard, Bunnell, Yagi, Wakao"
+            << exit(FatalIOError);
+    }
+}
+else
+{
+    Info<< "Isothermal mode: thermal-conductivity closure input is skipped."
+        << nl << endl;
 }
 
-word kEffClosureModel_
+const bool kEffClosureUsesSolidConductivity =
 (
-    porousMediaDict.lookup("ThermalConductivityClosureModel")
+    kEffClosureModel_ == "Standard"
+ || kEffClosureModel_ == "Yagi"
+ || kEffClosureModel_ == "Wakao"
 );
 
-if
-(
-    kEffClosureModel_ != "Const"
- && kEffClosureModel_ != "Standard"
- && kEffClosureModel_ != "Bunnell"
- && kEffClosureModel_ != "Yagi"
- && kEffClosureModel_ != "Wakao"
-)
+if (kEffClosureUsesSolidConductivity)
 {
-    FatalIOErrorInFunction(porousMediaDict)
-        << "Unknown ThermalConductivityClosureModel: "
-        << kEffClosureModel_ << nl
-        << "Valid options are: Const, Standard, Bunnell, Yagi, Wakao"
-        << exit(FatalIOError);
+    if (!porousMediaDict.found("SolidThermalConductivity"))
+    {
+        FatalIOErrorInFunction(porousMediaDict)
+            << "The selected effective thermal-conductivity closure '"
+            << kEffClosureModel_ << "' requires the entry "
+            << "'SolidThermalConductivity' [W/m/K]."
+            << exit(FatalIOError);
+    }
+
+    kappas =
+        readScalar(porousMediaDict.lookup("SolidThermalConductivity"));
+    alphas = kappas/Cps;
+}
+
+const bool kEffClosureUsesRe =
+(
+    kEffClosureModel_ == "Bunnell"
+ || kEffClosureModel_ == "Yagi"
+ || kEffClosureModel_ == "Wakao"
+);
+
+if (kEffClosureUsesRe)
+{
+    if (!porousMediaDict.found("SuperficialVelocity"))
+    {
+        FatalIOErrorInFunction(porousMediaDict)
+            << "The selected effective thermal-conductivity closure '"
+            << kEffClosureModel_ << "' requires the entry "
+            << "'SuperficialVelocity' [m/s] to evaluate the particle "
+            << "Reynolds number."
+            << exit(FatalIOError);
+    }
+
+    usup = readScalar(porousMediaDict.lookup("SuperficialVelocity"));
 }
 // Read and validate the stagnant-bed conductivity closure required by Wakao.
 word stagnantKeffClosureModel_("None");
