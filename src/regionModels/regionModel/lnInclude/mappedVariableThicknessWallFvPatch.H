@@ -1,1 +1,0 @@
-../derivedFvPatches/mappedVariableThicknessWall/mappedVariableThicknessWallFvPatch.H
