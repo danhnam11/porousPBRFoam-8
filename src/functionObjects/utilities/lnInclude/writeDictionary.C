@@ -1,1 +1,0 @@
-../writeDictionary/writeDictionary.C

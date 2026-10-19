@@ -1,1 +1,0 @@
-../mixtures/basicCombustionMixture/basicCombustionMixtureI.H

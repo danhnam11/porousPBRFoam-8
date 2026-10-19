@@ -1,1 +1,0 @@
-../sources/derived/solidEquilibriumEnergySource/solidEquilibriumEnergySource.C

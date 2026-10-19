@@ -1,1 +1,0 @@
-../removeRegisteredObject/removeRegisteredObject.C

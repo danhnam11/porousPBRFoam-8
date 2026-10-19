@@ -1,1 +1,0 @@
-../mixtures/basicMultiComponentCatMixture/basicMultiComponentCatMixture.C

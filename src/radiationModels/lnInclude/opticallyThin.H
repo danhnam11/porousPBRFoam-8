@@ -1,1 +1,0 @@
-../radiationModels/opticallyThin/opticallyThin.H

@@ -1,1 +1,0 @@
-../submodels/thermo/heatTransferModel/heatTransferModel/heatTransferModelNew.C

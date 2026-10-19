@@ -1,1 +1,0 @@
-../liquidProperties/C6H6/C6H6I.H

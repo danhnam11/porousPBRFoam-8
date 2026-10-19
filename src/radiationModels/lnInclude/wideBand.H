@@ -1,1 +1,0 @@
-../absorptionEmissionModels/wideBand/wideBand.H

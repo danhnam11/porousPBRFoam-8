@@ -1,1 +1,0 @@
-../thermo/sensibleEnthalpy/sensibleEnthalpy.H

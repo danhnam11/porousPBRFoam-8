@@ -1,1 +1,0 @@
-../wallHeatTransferCoeff/wallHeatTransferCoeff.C

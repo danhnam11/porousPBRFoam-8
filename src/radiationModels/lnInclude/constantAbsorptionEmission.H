@@ -1,1 +1,0 @@
-../absorptionEmissionModels/constantAbsorptionEmission/constantAbsorptionEmission.H

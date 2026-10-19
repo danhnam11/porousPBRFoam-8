@@ -1,1 +1,0 @@
-../heatFluxFromCatalyticSurfaces/heatFluxFromCatalyticSurfacesFvPatchScalarField.C

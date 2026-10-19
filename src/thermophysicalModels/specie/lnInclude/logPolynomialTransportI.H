@@ -1,1 +1,0 @@
-../transport/logPolynomial/logPolynomialTransportI.H

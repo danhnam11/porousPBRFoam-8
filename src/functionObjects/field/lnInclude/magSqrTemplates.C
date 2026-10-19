@@ -1,1 +1,0 @@
-../magSqr/magSqrTemplates.C

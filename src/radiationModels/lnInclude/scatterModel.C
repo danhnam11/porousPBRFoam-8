@@ -1,1 +1,0 @@
-../scatterModels/scatterModel/scatterModel.C

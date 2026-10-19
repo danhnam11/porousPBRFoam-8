@@ -1,1 +1,0 @@
-../derivedFvPatchFields/specieTransferTemperature/specieTransferTemperatureFvPatchScalarField.C

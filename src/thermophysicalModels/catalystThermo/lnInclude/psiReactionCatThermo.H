@@ -1,1 +1,0 @@
-../psiReactionCatThermo/psiReactionCatThermo.H

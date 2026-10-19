@@ -1,1 +1,0 @@
-../scatterModels/constantScatter/constantScatter.C

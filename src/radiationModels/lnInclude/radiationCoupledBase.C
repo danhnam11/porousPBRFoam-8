@@ -1,1 +1,0 @@
-../derivedFvPatchFields/radiationCoupledBase/radiationCoupledBase.C

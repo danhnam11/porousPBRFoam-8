@@ -1,1 +1,0 @@
-../radiationModels/opaqueSolid/opaqueSolid.C

@@ -1,1 +1,0 @@
-../absorptionEmissionModels/greyMean/greyMean.C

@@ -1,1 +1,0 @@
-../radiationModels/absorptionEmissionModels/greyMeanCombustion/greyMeanCombustion.H

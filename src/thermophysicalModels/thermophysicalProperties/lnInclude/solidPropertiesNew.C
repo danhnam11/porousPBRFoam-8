@@ -1,1 +1,0 @@
-../solidProperties/solidProperties/solidPropertiesNew.C
