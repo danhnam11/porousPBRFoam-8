@@ -5,7 +5,7 @@
 
 The solver provides runtime-selectable closure models for:
 
-- Pressure drop through packed beds, $S_{\mathrm{m}}$
+- Pressure drop through packed beds, $\mathbf{S}_m$
 - Effective thermal conductivity, $k_{\mathrm{eff}}$
 - Effective species diffusivity, $D_{i,\mathrm{eff}}$
 - Heat transfer coefficient between the reactor wall and the porous bed, $h_{\mathrm{w}}$
