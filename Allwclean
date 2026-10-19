@@ -60,6 +60,7 @@ rm -rf porousRhoPBRFoam
 rm -rf chemkinToFoam*
 rm -rf DTMchemkinToFoam*
 rm -rf FTMchemkinToFoam*
+rm -rf surfChemkinToFoam*
 
 cd - 
 
