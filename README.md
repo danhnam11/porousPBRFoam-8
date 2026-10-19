@@ -68,6 +68,7 @@ The surface-chemistry capability is based on the [`surfaceChemistryFoam-8`](http
 
 		catalystFoam
 		porousPBRFoam
+		porousRhoPBRFoam
 		surfChemkinToFoam
 		
 		DTLreactingFoam
