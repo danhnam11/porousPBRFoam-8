@@ -97,7 +97,7 @@ A test cases in catalytic processes is available in the _tutorials_ directory.
 
 ## Authors 
 This package was developed at the Clean Combustion & Energy Research Lab., Dept. of Mech. Engineering, Ulsan National Institute of Science and Technology (UNIST), Korea (Prof. C.S. Yoo: https://csyoo.unist.ac.kr/). If you publish results obtained by using this package, please cite our paper as follows:
-- J. H. Lee, D. N. Nguyen, H. W. Seo, H. J. Ahn, C. S. Yoo, Volume-averaged porous-media modeling of catalytic packed-bed reactors with detailed surface chemistry: Implementation and validation of porousPBRFoam, Chemical Engineering Journal (2026)(submitted).
+- J. H. Lee, D. N. Nguyen, H. W. Seo, H. J. Ahn, C. S. Yoo, Porous-media modeling of catalytic packed-bed reactors with detailed surface chemistry in OpenFOAM: modeling and validation, Computer Physics Communications (2026)(submitted).
 
 Contact:
 - danhnam11@gmail.com or jhlee28@unist.ac.kr
