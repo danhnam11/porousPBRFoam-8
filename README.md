@@ -5,10 +5,10 @@
 
 The solver provides runtime-selectable closure models for:
 
-- Pressure drop through packed beds
-- Effective thermal conductivity
-- Effective species diffusivity
-- Heat transfer between the reactor wall and the porous bed
+- Pressure drop through packed beds, $S_{\mathrm{m}}$
+- Effective thermal conductivity, $k_{\mathrm{eff}}$
+- Effective species diffusivity, $D_{i,\mathrm{eff}}$
+- Heat transfer coefficient between the reactor wall and the porous bed, $h_{\mathrm{w}}$
 
 Heterogeneous reaction rates evaluated per unit catalytic surface area are converted into volumetric species and heat source terms using the specified catalytic surface-to-volume ratio.
 
