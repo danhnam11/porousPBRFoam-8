@@ -1,0 +1,20 @@
+# ------------------------------------------------------------------
+# Allrun script for surfChemkinToFoam tutorial
+# ------------------------------------------------------------------
+
+#!/bin/sh
+cd "${0%/*}" || exit 1
+
+# Clean previous outputs first
+./Allclean || exit 1
+
+echo "Running surfChemkinToFoam inside $(pwd)..."
+
+surfChemkinToFoam \
+    surf.inp \
+    surfTherm.dat \
+    surfaceThermoDict \
+    ../constant/reactions.surf \
+    ../constant/thermo.solid
+
+#------------------------------------------------------------------------------

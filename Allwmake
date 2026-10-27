@@ -14,5 +14,6 @@ wmake $targetType applications/solvers/porousPBRFoam
 wmake $targetType applications/utilities/chemkinToFoam
 wmake $targetType applications/utilities/DTMchemkinToFoam
 wmake $targetType applications/utilities/FTMchemkinToFoam
+wmake $targetType applications/utilities/surfChemkinToFoam
 
 #------------------------------------------------------------------------------

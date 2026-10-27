@@ -28,6 +28,6 @@ thermoType
 
 inertSpecie N2;
 
-#include "thermo.catalyst.gas"
+#include "thermo.gas"
 
 // ************************************************************************* //

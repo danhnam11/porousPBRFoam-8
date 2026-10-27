@@ -31,10 +31,10 @@ surfChemkinToFoam \
     surfTherm.dat \
     surfaceThermoDict \
     reactions.surf \
-    thermo.surf.const
+    thermo.solid
 ```
 
-Run the script from the selected subdirectory. Its initial cleanup removes the previous `reactions.surf` and `thermo.surf.const` before regenerating them. To use another mechanism, enter its subdirectory and run its `Allrun` script instead.
+Run the script from the selected subdirectory. Its initial cleanup removes the previous `reactions.surf` and `thermo.solid` before regenerating them. To use another mechanism, enter its subdirectory and run its `Allrun` script instead.
 
 To remove the generated dictionaries:
 
@@ -50,5 +50,5 @@ The following files in each example subdirectory are particularly useful for und
 - `surfTherm.dat` — thermodynamic data supplied to the converter
 - `surfaceThermoDict` — default surface density, transport, and constant heat-capacity settings
 - `reactions.surf` — generated OpenFOAM surface reaction dictionary
-- `thermo.surf.const` — generated constant-property surface species dictionary
+- `thermo.solid` — generated constant-property surface species dictionary
 - `Allrun` — cleanup and conversion commands

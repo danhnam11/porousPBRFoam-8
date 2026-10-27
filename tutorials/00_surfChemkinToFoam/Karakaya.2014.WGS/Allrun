@@ -1,9 +1,11 @@
+#!/bin/sh
+cd "${0%/*}" || exit 1
 # ------------------------------------------------------------------
-# Allrun script for kineticChemkinToFoam tutorial
+# Allrun script for surfChemkinToFoam tutorial
 # ------------------------------------------------------------------
 
 # Clean previous outputs first 
-./Allclean
+./Allclean || exit 1
 
 echo "Running surfChemkinToFoam inside $(pwd)..."
 
@@ -12,6 +14,6 @@ surfChemkinToFoam \
     surfTherm.dat \
     surfaceThermoDict \
     reactions.surf \
-    thermo.surf.const
+    thermo.solid
 
 #------------------------------------------------------------------------------

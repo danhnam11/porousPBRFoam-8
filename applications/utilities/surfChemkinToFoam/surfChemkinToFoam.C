@@ -94,8 +94,6 @@ int main(int argc, char *argv[])
     Info<< "  - " << args[4] << nl;
     Info<< "  - " << args[5] << nl;
     Info<< nl;
-    Info<< "Copy these files into the 'constant' directory of your simulation case before running catalystFoam." << nl;
-    Info<< nl;
 
     return 0;
 }

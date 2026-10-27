@@ -1,20 +1,32 @@
 SITE/Ni_SURFACE/    SDEN/2.6E-9/
-Ni(s) H(s) NH3(s) N(s) NH2(s) NH(s)
+Ni(s) H(s) O(s) OH(s) H2O(s) NH3(s) N(s) NH2(s) NH(s)
 END
 REACTIONS  KJOULES/MOLE MWOFF
-Ni(s) + Ni(s) + H2 => H(s) +H(s)                1.000E-02  0.000      0.000 
-    STICK
-Ni(s) + NH3 => NH3(s)                           1.100E-02  0.000      0.000
-    STICK
-Ni(s) + Ni(s) + N2 => N(s) + N(s)               1.000E-06  0.000      0.000
-    STICK
-H(s) +H(s) => Ni(s) + Ni(s) +H2                 3.315E+19  0.000      82.210
-NH3(s) => Ni(s) + NH3                           8.210E+14  0.000      78.630 
-N(s) + N(s) => Ni(s) + Ni(s) + N2               4.442E+22  0.000      210.840 
-NH3(s) + Ni(s) => NH2(s) + H(s)                 5.723E+22  0.000      78.990 
-NH2(s) + H(s) => NH3(s) + Ni(s)                 1.320E+24  0.000      48.810 
-NH2(s) + Ni(s) => NH(s) + H(s)                  2.718E+22  0.000      75.740 
-NH(s) + H(s) => NH2(s) + Ni(s)                  3.702E+19  0.000      74.870 
-NH(s) + Ni(s) => N(s) + H(s)                    6.213E+19  0.000      22.930 
-N(s) + H(s) => NH(s) + Ni(s)                    2.070E+19  0.000      156.040
+H2 + Ni(s) + Ni(s) => H(s) + H(s)                    1.000E-02  0.000       0.000
+STICK
+H(s) + H(s) => Ni(s) + Ni(s) + H2                    3.315E+19  0.000      82.210
+O2 + Ni(s) + Ni(s) => O(s) + O(s)                    1.000E-02  0.000       0.000
+STICK
+O(s) + O(s) => Ni(s) + Ni(s) + O2                    3.928E+23  0.000     473.410
+H2O + Ni(s) => H2O(s)                            1.000E-01  0.000       0.000
+STICK
+H2O(s) => Ni(s) + H2O                            4.747E+12  0.000      62.090
+O(s) + H(s) => OH(s) + Ni(s)                     5.000E+22  0.000      97.900
+OH(s) + Ni(s) => O(s) + H(s)                     1.761E+21  0.000      36.000
+OH(s) + H(s) => H2O(s) + Ni(s)                   3.000E+20  0.000      42.700
+H2O(s) + Ni(s) => OH(s) + H(s)                   2.068E+21  0.000      91.070
+OH(s) + OH(s) => O(s) + H2O(s)               3.000E+21  0.000     100.000
+O(s) + H2O(s) => OH(s) + OH(s)               5.871E+23  0.000     210.270
+NH3 + Ni(s) => NH3(s)                            1.100E-02  0.000       0.000
+STICK
+NH3(s) => Ni(s) + NH3                            8.210E+14  0.000      78.630
+N2 + Ni(s) + Ni(s) => N(s) + N(s)                    1.000E-06  0.000       0.000
+STICK
+N(s) + N(s) => Ni(s) + Ni(s) + N2                    4.442E+22  0.000     210.840
+NH3(s) + Ni(s) => NH2(s) + H(s)                  5.723E+22  0.000      78.990
+NH2(s) + H(s) => NH3(s) + Ni(s)                  1.320E+24  0.000      48.810
+NH2(s) + Ni(s) => NH(s) + H(s)                   2.718E+22  0.000      75.740
+NH(s) + H(s) => NH2(s) + Ni(s)                   3.702E+19  0.000      74.870
+NH(s) + Ni(s) => N(s) + H(s)                     6.213E+19  0.000      22.930
+N(s) + H(s) => NH(s) + Ni(s)                     2.070E+19  0.000     156.040
 END
