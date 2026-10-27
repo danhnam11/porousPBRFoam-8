@@ -4,17 +4,16 @@ cd ${0%/*} || exit 1    # Run from this directory
 # Source tutorial run functions
 . $WM_PROJECT_DIR/bin/tools/RunFunctions
 
+# Convert the surface reaction mechanism
+(
+    cd chemkin || exit 1
+    ./Allchemkin
+) || exit 1
+
 # Set application name
 application=$(getApplication)
 
 runApplication blockMesh
-
-# Convert the surface reaction mechanism
-(
-    cd chemkin || exit 1
-    ./Allrun
-) || exit 1
-
 runApplication -o $application
 
 #------------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 #!/bin/sh
 # ------------------------------------------------------------------
-# Allrun script for surfChemkinToFoam tutorial
+# Allchemkin script for surfChemkinToFoam tutorial
 # ------------------------------------------------------------------
 
 cd "${0%/*}" || exit 1

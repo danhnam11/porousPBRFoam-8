@@ -1,8 +1,8 @@
+#!/bin/sh
 # ------------------------------------------------------------------
-# Allrun script for surfChemkinToFoam tutorial
+# Allchemkin script for surfChemkinToFoam tutorial
 # ------------------------------------------------------------------
 
-#!/bin/sh
 cd "${0%/*}" || exit 1
 
 # Clean previous outputs first

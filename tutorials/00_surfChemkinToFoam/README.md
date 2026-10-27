@@ -12,10 +12,10 @@ From the repository root, select an example subdirectory:
 
 ```bash
 cd tutorials/00_surfChemkinToFoam/example
-./Allrun
+./Allchemkin
 ```
 
-The `Allrun` script executes the following commands sequentially:
+The `Allchemkin` script executes the following commands sequentially:
 
 ```text
 Allclean
@@ -34,7 +34,7 @@ surfChemkinToFoam \
     thermo.solid
 ```
 
-Run the script from the selected subdirectory. Its initial cleanup removes the previous `reactions.surf` and `thermo.solid` before regenerating them. To use another mechanism, enter its subdirectory and run its `Allrun` script instead.
+Run the script from the selected subdirectory. Its initial cleanup removes the previous `reactions.surf` and `thermo.solid` before regenerating them. To use another mechanism, enter its subdirectory and run its `Allchemkin` script instead.
 
 To remove the generated dictionaries:
 
@@ -51,4 +51,4 @@ The following files in each example subdirectory are particularly useful for und
 - `surfaceThermoDict` — default surface density, transport, and constant heat-capacity settings
 - `reactions.surf` — generated OpenFOAM surface reaction dictionary
 - `thermo.solid` — generated constant-property surface species dictionary
-- `Allrun` — cleanup and conversion commands
+- `Allchemkin` — cleanup and conversion commands
