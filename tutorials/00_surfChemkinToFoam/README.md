@@ -11,7 +11,7 @@ Load the intended OpenFOAM 8 environment and compile this package as described i
 From the repository root, select an example subdirectory:
 
 ```bash
-cd tutorials/00_surfChemkinToFoam/example
+cd tutorials/00_surfChemkinToFoam/2013_Karakaya_Rh_H2Oxidation_example
 ./Allchemkin
 ```
 
@@ -52,3 +52,19 @@ The following files in each example subdirectory are particularly useful for und
 - `reactions.surf` — generated OpenFOAM surface reaction dictionary
 - `thermo.solid` — generated constant-property surface species dictionary
 - `Allchemkin` — cleanup and conversion commands
+
+## Mechanism directories
+
+Directory names use publication year, first author, catalyst and reaction. AKC and PKC retain the original formulation labels. The example directory is an unchanged duplicate of the Karakaya H2-oxidation input set.
+
+- `2011_Appari_Ni_NH3Decomposition`
+- `1996_Deutschmann_Pt_CH4Oxidation`
+- `2013_Karakaya_Rh_H2Oxidation`
+- `2014_Karakaya_Rh_WGS`
+- `2011_Maier_Ni_SMR`
+- `2021_Schmider_Ni_CO_CO2Methanation`
+- `2016_Takahashi_Ru_NH3Decomposition_AKC`
+- `2016_Takahashi_Ru_NH3Decomposition_PKC`
+- `2013_Karakaya_Rh_H2Oxidation_example`
+
+Karakaya H2 oxidation uses the 2013 journal publication year (DOI: 10.1016/j.ces.2012.11.004), rather than the old 2012 label. The 2021 methanation mechanism is attributed to first author Schmider (DOI: 10.1021/acs.iecr.1c00389). Names identify mechanism provenance; they do not validate modified input files.
