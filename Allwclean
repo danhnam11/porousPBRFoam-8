@@ -10,7 +10,6 @@ wclean ./applications/solvers/reactingFoam
 wclean ./applications/solvers/DTLreactingFoam
 wclean ./applications/solvers/catalystFoam
 wclean ./applications/solvers/porousPBRFoam
-wclean ./applications/solvers/porousRhoPBRFoam
 
 wclean ./applications/utilities/DTMchemkinToFoam
 wclean ./applications/utilities/FTMchemkinToFoam
@@ -55,7 +54,6 @@ rm -rf DTLreactingFoam*
 rm -rf reactingFoam*
 rm -rf catalystFoam
 rm -rf porousPBRFoam
-rm -rf porousRhoPBRFoam
 
 rm -rf chemkinToFoam*
 rm -rf DTMchemkinToFoam*

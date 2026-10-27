@@ -1,0 +1,108 @@
+****************************************************************************
+* hwloc 1.11.2 has encountered an incorrect PCI locality information.
+* PCI bus 0000:40 is supposedly close to 2nd NUMA node of 1st package,
+* however hwloc believes this is impossible on this architecture.
+* Therefore the PCI bus will be moved to 1st NUMA node of 2nd package.
+*
+* If you feel this fixup is wrong, disable it by setting in your environment
+* HWLOC_PCI_0000_40_LOCALCPUS= (empty value), and report the problem
+* to the hwloc's user mailing list together with the XML output of lstopo.
+*
+* You may silence this message by setting HWLOC_HIDE_ERRORS=1 in your environment.
+****************************************************************************
+****************************************************************************
+* hwloc 1.11.2 has encountered an incorrect PCI locality information.
+* PCI bus 0000:44 is supposedly close to 2nd NUMA node of 1st package,
+* however hwloc believes this is impossible on this architecture.
+* Therefore the PCI bus will be moved to 1st NUMA node of 2nd package.
+*
+* If you feel this fixup is wrong, disable it by setting in your environment
+* HWLOC_PCI_0000_44_LOCALCPUS= (empty value), and report the problem
+* to the hwloc's user mailing list together with the XML output of lstopo.
+*
+* You may silence this message by setting HWLOC_HIDE_ERRORS=1 in your environment.
+****************************************************************************
+****************************************************************************
+* hwloc 1.11.2 has encountered an incorrect PCI locality information.
+* PCI bus 0000:53 is supposedly close to 2nd NUMA node of 1st package,
+* however hwloc believes this is impossible on this architecture.
+* Therefore the PCI bus will be moved to 1st NUMA node of 2nd package.
+*
+* If you feel this fixup is wrong, disable it by setting in your environment
+* HWLOC_PCI_0000_53_LOCALCPUS= (empty value), and report the problem
+* to the hwloc's user mailing list together with the XML output of lstopo.
+*
+* You may silence this message by setting HWLOC_HIDE_ERRORS=1 in your environment.
+****************************************************************************
+****************************************************************************
+* hwloc 1.11.2 has encountered an incorrect PCI locality information.
+* PCI bus 0000:62 is supposedly close to 2nd NUMA node of 1st package,
+* however hwloc believes this is impossible on this architecture.
+* Therefore the PCI bus will be moved to 1st NUMA node of 2nd package.
+*
+* If you feel this fixup is wrong, disable it by setting in your environment
+* HWLOC_PCI_0000_62_LOCALCPUS= (empty value), and report the problem
+* to the hwloc's user mailing list together with the XML output of lstopo.
+*
+* You may silence this message by setting HWLOC_HIDE_ERRORS=1 in your environment.
+****************************************************************************
+****************************************************************************
+* hwloc 1.11.2 has encountered an incorrect PCI locality information.
+* PCI bus 0000:71 is supposedly close to 2nd NUMA node of 1st package,
+* however hwloc believes this is impossible on this architecture.
+* Therefore the PCI bus will be moved to 1st NUMA node of 2nd package.
+*
+* If you feel this fixup is wrong, disable it by setting in your environment
+* HWLOC_PCI_0000_71_LOCALCPUS= (empty value), and report the problem
+* to the hwloc's user mailing list together with the XML output of lstopo.
+*
+* You may silence this message by setting HWLOC_HIDE_ERRORS=1 in your environment.
+****************************************************************************
+[cpl2-04:272936] mca_base_component_repository_open: unable to open mca_btl_usnic: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272940] mca_base_component_repository_open: unable to open mca_btl_usnic: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272942] mca_base_component_repository_open: unable to open mca_btl_usnic: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272947] mca_base_component_repository_open: unable to open mca_btl_usnic: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272935] mca_base_component_repository_open: unable to open mca_btl_usnic: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272937] mca_base_component_repository_open: unable to open mca_btl_usnic: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272943] mca_base_component_repository_open: unable to open mca_btl_usnic: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272944] mca_base_component_repository_open: unable to open mca_btl_usnic: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272933] mca_base_component_repository_open: unable to open mca_btl_usnic: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272938] mca_base_component_repository_open: unable to open mca_btl_usnic: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272945] mca_base_component_repository_open: unable to open mca_btl_usnic: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272934] mca_base_component_repository_open: unable to open mca_btl_usnic: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272948] mca_base_component_repository_open: unable to open mca_btl_usnic: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272941] mca_base_component_repository_open: unable to open mca_btl_usnic: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272939] mca_base_component_repository_open: unable to open mca_btl_usnic: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272946] mca_base_component_repository_open: unable to open mca_btl_usnic: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272940] mca_base_component_repository_open: unable to open mca_mtl_ofi: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272936] mca_base_component_repository_open: unable to open mca_mtl_ofi: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272940] mca_base_component_repository_open: unable to open mca_mtl_psm2: libpsm2.so.2: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272936] mca_base_component_repository_open: unable to open mca_mtl_psm2: libpsm2.so.2: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272942] mca_base_component_repository_open: unable to open mca_mtl_ofi: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272942] mca_base_component_repository_open: unable to open mca_mtl_psm2: libpsm2.so.2: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272947] mca_base_component_repository_open: unable to open mca_mtl_ofi: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272937] mca_base_component_repository_open: unable to open mca_mtl_ofi: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272943] mca_base_component_repository_open: unable to open mca_mtl_ofi: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272935] mca_base_component_repository_open: unable to open mca_mtl_ofi: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272938] mca_base_component_repository_open: unable to open mca_mtl_ofi: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272944] mca_base_component_repository_open: unable to open mca_mtl_ofi: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272948] mca_base_component_repository_open: unable to open mca_mtl_ofi: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272934] mca_base_component_repository_open: unable to open mca_mtl_ofi: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272945] mca_base_component_repository_open: unable to open mca_mtl_ofi: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272941] mca_base_component_repository_open: unable to open mca_mtl_ofi: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272939] mca_base_component_repository_open: unable to open mca_mtl_ofi: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272933] mca_base_component_repository_open: unable to open mca_mtl_ofi: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272947] mca_base_component_repository_open: unable to open mca_mtl_psm2: libpsm2.so.2: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272943] mca_base_component_repository_open: unable to open mca_mtl_psm2: libpsm2.so.2: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272937] mca_base_component_repository_open: unable to open mca_mtl_psm2: libpsm2.so.2: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272938] mca_base_component_repository_open: unable to open mca_mtl_psm2: libpsm2.so.2: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272935] mca_base_component_repository_open: unable to open mca_mtl_psm2: libpsm2.so.2: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272944] mca_base_component_repository_open: unable to open mca_mtl_psm2: libpsm2.so.2: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272948] mca_base_component_repository_open: unable to open mca_mtl_psm2: libpsm2.so.2: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272934] mca_base_component_repository_open: unable to open mca_mtl_psm2: libpsm2.so.2: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272939] mca_base_component_repository_open: unable to open mca_mtl_psm2: libpsm2.so.2: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272945] mca_base_component_repository_open: unable to open mca_mtl_psm2: libpsm2.so.2: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272941] mca_base_component_repository_open: unable to open mca_mtl_psm2: libpsm2.so.2: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272933] mca_base_component_repository_open: unable to open mca_mtl_psm2: libpsm2.so.2: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272946] mca_base_component_repository_open: unable to open mca_mtl_ofi: libfabric.so.1: cannot open shared object file: No such file or directory (ignored)
+[cpl2-04:272946] mca_base_component_repository_open: unable to open mca_mtl_psm2: libpsm2.so.2: cannot open shared object file: No such file or directory (ignored)

@@ -1,1 +1,0 @@
-Qdot = reaction->Qdot();

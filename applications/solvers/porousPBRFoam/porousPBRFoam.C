@@ -22,16 +22,17 @@ License
     along with OpenFOAM.  If not, see <http://www.gnu.org/licenses/>.
 
 Application
-    reactingFoam
+    porousPBRFoam_integrate
 
 Description
-    Solver for combustion with chemical reactions.
+    Unified porous packed-bed solver. The thermodynamics entry selects
+    the psi or rho numerical path at run time.
 
 \*---------------------------------------------------------------------------*/
 
 #include "fvCFD.H"
 #include "fluidThermoMomentumTransportModel.H"
-#include "psiReactionThermophysicalTransportModel.H"
+#include "psi/psiTransportCompatibility.H"
 #include "psiReactionThermo.H"
 #include "CombustionModel.H"
 #include "multivariateScheme.H"
@@ -40,137 +41,46 @@ Description
 #include "fvOptions.H"
 #include "localEulerDdtScheme.H"
 #include "fvcSmooth.H"
-//for cat
-#include "psiReactionCatThermo.H"
 #include "psiReactionCatThermo.H"
 #include "SurfaceReaction.H"
 #include "SurfaceReactionList.H"
 #include "BasicSurfaceChemistryModel.H"
-//end of for cat
-
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+#include "dynamicFvMesh.H"
+#include "rhoReactionThermo.H"
+#include "rhoReactionThermophysicalTransportModel.H"
+#include "CorrectPhi.H"
 
 int main(int argc, char *argv[])
 {
-    #include "postProcess.H"
+    argList::addNote
+    (
+        "Porous packed-bed solver with hePsiThermo/heRhoThermo selection."
+    );
 
     #include "setRootCaseLists.H"
     #include "createTime.H"
-    #include "createMesh.H"
-    #include "createControl.H"
-    #include "createTimeControls.H"
     #include "initContinuityErrs.H"
-    #include "createFields.H"
-    #include "createFieldsPorousMedia.H" //Nam
 
-    if (solverMode_ == "PMSCHEM")
+    #include "readThermoType.H"
+
+    if (thermoType == "hePsiThermo")
     {
-	#include "createFieldsCatalyst.H" //Nam
+        Info<< "Selecting psi thermodynamics for porousPBRFoam_integrate" << nl;
+        #include "psi/solvePsi.H"
     }
-    #include "createMRF.H"
-    #include "createFvOptions.H"
-
-    #include "createFieldRefs.H"
-
-    turbulence->validate();
-
-    if (!LTS)
+    else if (thermoType == "heRhoThermo")
     {
-        #include "compressibleCourantNo.H"
-        #include "setInitialDeltaT.H"
+        Info<< "Selecting rho thermodynamics for porousPBRFoam_integrate" << nl;
+        #include "rho/solveRho.H"
     }
-
-    // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-
-    Info<< "\nStarting time loop\n" << endl;
-
-    while (pimple.run(runTime))
+    else
     {
-        #include "readTimeControls.H"
-
-        if (LTS)
-        {
-            #include "setRDeltaT.H"
-        }
-        else
-        {
-            #include "compressibleCourantNo.H"
-            #include "setDeltaT.H"
-        }
-
-        runTime++;
-
-        Info<< "Time = " << runTime.timeName() << nl << endl;
-
-        #include "PMrhoEqn.H"
-
-        while (pimple.loop())
-        {           
-            #include "updateForPorousMedia.H" //Nam
-            #include "PMUEqn.H"
-
-    	    if (solverMode_ == "PMSCHEM")
-	    {
-	        #include "calculateSurfaceReactions.H" //Nam
-	        #include "PMSCHEM_YEqn.H"
-
-		if (!isothermal)
-    		{
-        	    #include "PMSCHEM_EEqn.H"
-    		}
-    		else
-    		{
-        	    #include "PMSCHEM_EEqn_iso.H"
-    		}
-	        //#include "PMSCHEM_EEqn.H"
-        	#include "PMSCHEM_setQdot.H"
-    	    }
-
-	    else // solverMode_ == "PM"
-	    {
-	        #include "PM_YEqn.H"
-		if (!isothermal)
-		{
-		    #include "PM_EEqn.H"
-        	    #include "PM_setQdot.H"
-		}
-		else
-		{
-		    #include "PM_EEqn_iso.H"
-		}
-	        //#include "PM_EEqn.H"
-        	//#include "PM_setQdot.H"
-	    }
-            // --- Pressure corrector loop
-            while (pimple.correct())
-            {
-                #include "pEqn.H"
-            }
-
-            if (pimple.turbCorr())
-            {
-                turbulence->correct();
-                thermophysicalTransport->correct();
-            }
-        }
-
-        rho   = thermo.rho();
-        mu    = thermo.mu();   //Nam
-        Cp    = thermo.Cp();   //Nam
-        kappa = thermo.kappa(); //Nam
-        heGas = thermo.he(); //for cat
-
-        runTime.write();
-
-        Info<< "ExecutionTime = " << runTime.elapsedCpuTime() << " s"
-            << "  ClockTime = " << runTime.elapsedClockTime() << " s"
-            << nl << endl;
+        FatalErrorInFunction
+            << "Unsupported thermoType.type: " << thermoType << nl
+            << "Expected hePsiThermo or heRhoThermo."
+            << exit(FatalError);
     }
-
-    Info<< "End\n" << endl;
-
     return 0;
 }
-
 
 // ************************************************************************* //
