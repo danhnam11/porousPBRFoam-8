@@ -15,21 +15,22 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-// Solid Thermophysical properties
+// 1. Simulation controls
+solverMode					PM;
+isothermal                          		off;
+
+// 2. Solid properties and bed geometry
 SolidThermalConductivity     			1.175;   // [W/m-K]
 SolidDensity                 			2719;   // [kg/m3]
 SolidHeatCapacity            			871;    // [J/kg-K]
-
-// Porous Media geometric properties
 Porosity                     			0.4165; // [-]
 ParticleDiameter             			5e-3;   // [m]
 
-// Porous Media closure model
+// 3. Porous-media closure model
 pressureDropClosureModel			None;
 ThermalConductivityClosureModel 		Const;
 DiffusivityClosureModel				BruggemanWilhelm;
 WallHeatTransferClosureModel                    Const;
-
 EffectiveThermalConductivity  			0.7;
 heatTransferCoefficient				100;
 

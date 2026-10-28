@@ -14,24 +14,21 @@ FoamFile
     object      porousMediaProperties;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// 1. Simulation controls
 solverMode      				PMSCHEM;
 isothermal					on;
 
-// Solid Thermophysical properties
-SolidThermalConductivity 			30;     // [W/m-K]
-SolidDensity             			3540;   // [kg/m3]
-SolidHeatCapacity        			880;    // [J/kg-K]
-
-// Porous Media geometric properties
+// 2. Solid properties and bed geometry
+SolidThermalConductivity                        30;     // [W/m-K]
+SolidDensity                                    3540;   // [kg/m3]
+SolidHeatCapacity                               880;    // [J/kg-K]
 Porosity                 			0.38;    // [-]
 ParticleDiameter         			2E-5;   // [m]
 
-// Porous Media closure model
+// Porous-media closure model
 pressureDropClosureModel                        Forchheimer;
 DiffusivityClosureModel                         BruggemanWilhelm;
-
-// Porous Media heat transfer properties
 DarcyCoeff                      		1.0508E+07;
 ForchCoeff                      		1.9773E+03;
-
 // ************************************************************************* //
