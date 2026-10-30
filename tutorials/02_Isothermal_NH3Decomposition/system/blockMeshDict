@@ -48,7 +48,7 @@ edges
 
 blocks
 ( 	
-	hex (0 2 1 0 3 5 4 3)   (50 1 200) simpleGrading (1 1 1) //
+	hex (0 2 1 0 3 5 4 3)   (20 1 80) simpleGrading (1 1 1) //
 
 );
                                      
