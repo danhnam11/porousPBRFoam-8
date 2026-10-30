@@ -41,18 +41,11 @@ if (isothermal)
 // Prescribed porous-medium and solid-phase properties.
 // Porosity [-]
 #include "porousMedia/readProperties/readPorousMediaProperties.H"
-
-#include "porousMedia/readProperties/readThermalConductivityModel.H"
-
-#include "porousMedia/readProperties/readThermalClosureInputs.H"
+#include "porousMedia/readProperties/readMomentumResistance.H"
+#include "porousMedia/readProperties/readSpeciesDiffusivity.H"
+#include "porousMedia/readProperties/readEffectiveConductivity.H"
 
 #include "porousMedia/createFields/createPorousMomentum.H"
-
-#include "porousMedia/readProperties/readConstantConductivity.H"
-
-#include "porousMedia/readProperties/readAnisotropicConductivity.H"
-
-#include "porousMedia/readProperties/readThermalClosureCoeffs.H"
 
 #include "porousMedia/createFields/createPorousMediaFields.H"
 

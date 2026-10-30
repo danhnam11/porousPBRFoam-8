@@ -31,6 +31,7 @@ Description
 \*---------------------------------------------------------------------------*/
 
 #include "fvCFD.H"
+#include "porousMedia/porousClosureInputValidation.H"
 #include "fluidThermoMomentumTransportModel.H"
 #include "psi/psiTransportCompatibility.H"
 #include "psiReactionThermo.H"

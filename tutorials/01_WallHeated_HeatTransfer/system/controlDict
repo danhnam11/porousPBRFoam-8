@@ -15,7 +15,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     porousRhoPBRFoam;
+application     porousPBRFoam;
 
 startFrom       latestTime;
 
